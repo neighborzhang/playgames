@@ -1,0 +1,12 @@
+#!/bin/bash
+#PBS -l nodes=2:ppn=16:xe
+#PBS -N pong_dqn_1
+#PBS -l walltime=40:00:00
+#PBS -e $PBS_JOBNAME.$PBS_JOBID.err
+#PBS -o $PBS_JOBNAME.$PBS_JOBID.out
+#PBS -M tzhang81@illinois.edu
+cd ~/bin/DQN-chainer/DQN-chainer-gym
+. /opt/modules/default/init/bash
+module load bwpy
+module load cudatoolkit
+aprun -n 1 -N 1 python main.py

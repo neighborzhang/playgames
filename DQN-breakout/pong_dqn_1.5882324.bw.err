@@ -1,0 +1,16 @@
+[2016-12-14 01:55:02,999] Making new env: Pong-v0
+Traceback (most recent call last):
+  File "main.py", line 16, in <module>
+    agent = ag.DQN_Agent(env)
+  File "/mnt/a/u/training/tra302/bin/DQN-chainer/DQN-chainer-gym/dqn_agent.py", line 196, in __init__
+    self.dqn = DQN(n_history=4, n_act=env.action_space.n)
+  File "/mnt/a/u/training/tra302/bin/DQN-chainer/DQN-chainer-gym/dqn_agent.py", line 54, in __init__
+    self.model = ActionValue(n_history, n_act).to_gpu()
+  File "/u/training/tra302/.local/lib/python2.7/site-packages/chainer/link.py", line 614, in to_gpu
+    super(Chain, self).to_gpu()
+  File "/u/training/tra302/.local/lib/python2.7/site-packages/chainer/link.py", line 326, in to_gpu
+    cuda.check_cuda_available()
+  File "/u/training/tra302/.local/lib/python2.7/site-packages/chainer/cuda.py", line 85, in check_cuda_available
+    raise RuntimeError(msg)
+RuntimeError: CUDA environment is not correctly set up
+(see https://github.com/pfnet/chainer#installation).CuPy is not correctly installed. Please check your environment, uninstall Chainer and reinstall it with `pip install chainer --no-cache-dir -vvvv`.
